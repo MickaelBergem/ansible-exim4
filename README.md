@@ -21,7 +21,8 @@ The following variables are used for the content of the /etc/exim4/update-exim4.
 * *exim4_dc_hide_mailname*
 * *exim4_dc_mailname_in_oh*
 * *exim4_dc_localdelivery*
-* *exim4_catch_all_email*
+* *exim4_catch_all_email*: catch all the emails (incoming and outgoing) and send them to this address
+* *exim4_catch_incoming_email*: catch only incoming emails
 * *exim4_passwd_client*: Account and password data for SMTP authentication when exim is authenticating as a client to
    some remote server as a list.
 
