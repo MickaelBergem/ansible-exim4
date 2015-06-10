@@ -1,4 +1,4 @@
-Role Name
+Exim4 role for Ansible
 ========
 
 Ansbile role to install and configure Exim4 on Debian based system.
@@ -17,7 +17,7 @@ The following variables are used for the content of the /etc/exim4/update-exim4.
 * *exim4_dc_relay_nets*
 * *exim4_dc_smarthost*
 * *exim4_CFILEMODE*
-* *exim4_dc_use_split_config*
+* *exim4_dc_use_split_config*: set to yes if using catchall rules
 * *exim4_dc_hide_mailname*
 * *exim4_dc_mailname_in_oh*
 * *exim4_dc_localdelivery*
