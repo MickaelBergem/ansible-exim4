@@ -10,7 +10,7 @@
   notify: update exim4.conf
 
 - name: Create catch all configuration
-  template: src=01_exim4-config_catch_all dest=/etc/exim4/conf.d/router/01_exim4-config_catch_all
+  template: src=exim4-catchall dest=/etc/exim4/conf.d/router/01_exim4-config_catch_all
   when: (exim4_catch_all_email is defined) and exim4_catch_all_email
   notify: update exim4.conf
 
@@ -20,12 +20,12 @@
   notify: update exim4.conf
 
 - name: Create catch all incoming configuration
-  template: src=02_exim4-config_catch_incoming dest=/etc/exim4/conf.d/router/02_exim4-config_catch_incoming
+  template: src=exim4-catchall-incoming dest=/etc/exim4/conf.d/router/450_exim4-config_catch_incoming
   when: (exim4_catch_incoming_email is defined) and exim4_catch_incoming_email
   notify: update exim4.conf
 
 - name: Delete catch incoming configuration
-  file: path=/etc/exim4/conf.d/router/02_exim4-config_catch_incoming state=absent
+  file: path=/etc/exim4/conf.d/router/450_exim4-config_catch_incoming state=absent
   when: (not exim4_catch_incoming_email is defined) or (not exim4_catch_incoming_email)
   notify: update exim4.conf
 

@@ -1,4 +1,4 @@
-catch_all_outgoing:
+catch_all_incoming:
  debug_print = "R: redirect incoming to $local_part@$domain"
  driver = redirect
  data = {{ exim4_catch_incoming_email }}
